@@ -1,11 +1,13 @@
 //Dependencies
 const mysql = require('mysql');
+const dbPassword = require('../config/dbpword.js');
 
-var connetion = mysql.createConnection({
+const newPassword = dbPassword;
+var connection = mysql.createConnection({
   port: 3306,
   host: "localhost",
   user: "root",
-  password: "",
+  password: newPassword,
   database: "burgers_db"
 });
 
