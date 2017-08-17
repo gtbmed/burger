@@ -1,0 +1,18 @@
+<h1>Eat-Da-Burger...or not</h1>
+
+<!-- Get the parts to work first, then make it pretty -->
+<ul>
+  {{#each burgers}}
+    {{#unless this.devoured}}
+      <li>
+        {{this.name}}
+
+        <form action="/burger/update/{{this.id}}?_method=PUT" method="POST">
+          <input type="hidden" name="devoured" value="true">
+          <button type="submit">DEVOUR SAID FOOD BURGER</button>
+        </form>
+        
+      </li>
+    {{/unless}}
+  {{/each}}
+</ul>
