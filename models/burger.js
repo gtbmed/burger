@@ -14,7 +14,7 @@ var burger = {
     });
   },
   // Update a burger entry.  Usually, when "devoured"
-  update: function("burgers", objColVals, condition, cb) {
+  update: function(objColVals, condition, cb) {
     orm.updateOne("burgers", objColVals, condition, function(res) {
       cb(res);
     });

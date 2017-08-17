@@ -1,5 +1,5 @@
 // Dependencies
-const connection = require('../config/connetion.js');
+const connection = require('../config/connection.js');
 
 // Helper function that will add question marks to SQL syntax
 function printQuestionMarks(num) {
